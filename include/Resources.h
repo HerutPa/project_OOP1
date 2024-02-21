@@ -29,7 +29,7 @@ public:
 
 	enum TextureObject
 	{
-		t_wall, t_door, t_cat ,t_mouse, t_cheese, t_present, t_key, t_save, t_reset, t_Key, t_LifeGift, t_TimeGift, t_FreezeGift,
+		t_wall, t_door, t_cat ,t_mouse, t_cheese, t_present, t_key, t_save, t_reset, t_LifeGift, t_TimeGift, t_FreezeGift,
 		// Add other...
 		t_Total
 	};

@@ -16,9 +16,9 @@ void Resources::loadTextures()
 	m_textureVec[TextureObject::t_door].loadFromFile("door.png");
 	//m_textureVec[TextureObject::t_cat].loadFromFile("cat.png");
 	//m_textureVec[TextureObject::t_mouse].loadFromFile("mouse.png");
-	//m_textureVec[TextureObject::t_cheese].loadFromFile("cheese.png");
-	//m_textureVec[TextureObject::t_present].loadFromFile("present.png");
-	//m_textureVec[TextureObject::t_key].loadFromFile("key.png");
+	m_textureVec[TextureObject::t_cheese].loadFromFile("cheese.png");
+	m_textureVec[TextureObject::t_present].loadFromFile("present.png");
+	m_textureVec[TextureObject::t_key].loadFromFile("key.png");
 	//m_textureVec[TextureObject::t_save].loadFromFile("save.png");
 	//m_textureVec[TextureObject::t_reset].loadFromFile("reset.png");
 }

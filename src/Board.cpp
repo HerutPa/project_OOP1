@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Board.h"
+#include <Present.h>
 
 
 
@@ -56,7 +57,7 @@ void Board::readboard()
 	{
 		for (int col = 0; col < m_matrixVector[row].size(); ++col)
 		{
-			location = sf::Vector2(row * SPRITE_SIZE, col * SPRITE_SIZE);
+			location = sf::Vector2(col * SPRITE_SIZE, row * SPRITE_SIZE-4000);
 			location *= scaleFactor.x;
 			switch (m_matrixVector[row][col])
 			{
@@ -73,7 +74,30 @@ void Board::readboard()
 				m_StaticObject.back()->satScale(scaleFactor);
 				break;
 			}
-			//case '%':
+			case 'F':
+			{
+				m_StaticObject.push_back(std::make_unique<Key>(Resources::instance().getTexture(Resources::t_key), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
+			case '*':
+			{
+				m_StaticObject.push_back(std::make_unique<Cheese>(Resources::instance().getTexture(Resources::t_cheese), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
+			case '$':
+			{
+				m_StaticObject.push_back(std::make_unique<Present>(Resources::instance().getTexture(Resources::t_present), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
+
+
+
+
+
+			//case 'F':
 			//{
 			//	m_MovingObject.push_back(std::make_unique<mouse>(location, Resources::instance().getTexture(Resources::t_mouse)));
 
