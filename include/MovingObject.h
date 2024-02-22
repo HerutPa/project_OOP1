@@ -17,6 +17,8 @@ public:
 	void virtual moveObject(sf::Time clock/*לשלוח שני וקטורים*/) = 0;
 	void virtual updateMovement(sf:: Vector2f, int) = 0;
 	void virtual checkCollition() = 0;
+	virtual void UpdateDirection(sf::Vector2f) = 0;
+
 
 
 

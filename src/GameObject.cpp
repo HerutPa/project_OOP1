@@ -39,3 +39,8 @@ void GameObject::handleCollison(GameObject& obj)
 	obj.handleCollison(*this);
 }
 
+sf::Sprite& GameObject::GetSprite()
+{
+	return m_sprite;
+}
+

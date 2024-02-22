@@ -32,10 +32,15 @@ public:
 
     sf::Vector2f CalculateFactor();
 
+    void UpdateDirection();
+
+    sf::Sprite GetGameObjectMoving(const int index);
+
 
 
 private:
 
+    int m_mouse_idx;
 
     std::vector<std::string> m_matrixVector;
     int m_row = 0;

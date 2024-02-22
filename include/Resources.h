@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-//#include <SFML/Audio.hpp>
+#include <SFML/Audio.hpp>
 #include <string.h>
 #include <vector>
 
@@ -10,6 +10,8 @@
 enum Button { PLAY, HELP, EXIT, VIDEO_PLAY, BACK };
 enum Title { TITLE, HELLO, WANNA_PLAY, LETS_GO, TITLE_PACMAN, TITLE_DEAMONS };
 enum Direction { Up, Down, Right, Left, Stay };
+enum Sound { SONG, CLICK, MINUS_LIFE, EAT, CLOCK_SOUND, DOOR_SOUND, FREEZE_SOUND, KEY_SOUND, EXTRA_LIFE, SUPER_PACMAN_SOUND, GAME_OVER };
+
 
 //consts
 const int BUTTONS = 5;
@@ -17,9 +19,9 @@ const int TITLE_OBJECTS = 6;
 const int INSTRUCTIONS = 7;
 const int GAME_OBJECTS = 13;
 const int TOOL_BAR = 5;
-const int WINDOW_HEIGHT = 900;
-const int WINDOW_WIDTH = 1200;
-//const int SOUNDS = 11;
+//const int WINDOW_HEIGHT = 900;
+//const int WINDOW_WIDTH = 1200;
+const int SOUNDS = 11;
 const float SPRITE_SIZE = 400.f;
 
 
@@ -39,7 +41,7 @@ public:
 	const sf::Texture& getTexture(TextureObject texObj) const;
 	//const sf::Texture& getMenuTexture(Menu_Textures texture) const;
 	//const sf::Font& getFont() const;
-	//sf::SoundBuffer& getSound(Sounds sound);
+	sf::SoundBuffer& GetSound(Sound);
 
 	
 
@@ -69,6 +71,7 @@ private:
 	Resources& operator=(const Resources&) = default;
 	//void loadSounds();
 	void loadTextures();
+	sf::SoundBuffer m_Sounds[SOUNDS];
 
 
 

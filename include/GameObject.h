@@ -29,6 +29,7 @@ public:
 
     void handleCollison(GameObject& obj);
 	virtual void handleCollison(Wall& obj) {};
+	sf::Sprite& GetSprite();
 
 	/*virtual void handleCollison(Mouse& obj);
 	virtual void handleCollison(GamCateObject& obj);
@@ -46,6 +47,7 @@ protected:
 	sf::Sprite m_sprite;
 	char m_char;
 	//sf::Vector2f 
+
 
 
 };

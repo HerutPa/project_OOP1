@@ -6,4 +6,10 @@ configure_file ("cheese.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("present.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Board.txt" ${CMAKE_BINARY_DIR} COPYONLY)
 
+configure_file ("Song.ogg" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("GameOver.ogg" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Click.ogg" ${CMAKE_BINARY_DIR} COPYONLY)
+
+
+
 

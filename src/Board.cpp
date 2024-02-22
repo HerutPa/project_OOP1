@@ -3,15 +3,6 @@
 #include "Board.h"
 #include <Present.h>
 
-
-
-//Board::Board()
-//	:m_matrix(), m_row(m_matrix.GetRow()), m_col(m_matrix.GetCol())
-//{
-//	CreateReactangles();
-//	InitVector();
-//}
-
 Board::Board() : m_ifile("Board.txt")
 {
 
@@ -131,12 +122,27 @@ sf::Vector2f Board::CalculateFactor()
 
 	sf::Vector2f scaleFactor;
 
-	float heigt = (WINDOW_HEIGHT - 280);
-	float width = WINDOW_WIDTH;
+	float heigt = (800 - 280);
+	float width = 1400;
 	scaleFactor.x = std::min(heigt / (m_row * SPRITE_SIZE), width / (m_col * SPRITE_SIZE));
 	scaleFactor.y = scaleFactor.x;
 
 	//scaleFactor.x *= 0.f;
 
 	return scaleFactor;
+}
+
+void Board::UpdateDirection()
+{
+	//update each object direction 
+	for (int index = 0; index < m_MovingObject.size(); ++index)
+	{
+		m_MovingObject[index]->UpdateDirection(GetGameObjectMoving(m_mouse_idx).getPosition());
+	}
+}
+
+
+sf::Sprite Board::GetGameObjectMoving(const int index)
+{
+	return m_MovingObject[index]->GetSprite();
 }

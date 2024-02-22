@@ -5,9 +5,13 @@
 #include "Menu.h"
 #include "Resources.h"
 #include "Board.h"
-//#include "Pacman.h"
+//#include "Mouse.h"
 #include "StaticObjects.h"
-#include "ToolBar.h"
+//#include "ToolBar.h"
+#include "StaticObjects.h"
+
+const int WINDOW_HEIGHT = 800;
+const int WINDOW_WIDTH = 1400;
 
 
 class GameControll
@@ -32,10 +36,10 @@ public:
 private:
 	sf::RenderWindow m_window;
 	Resources& m_resource = Resources::instance();
-	//Menu m_menu;
+	Menu m_menu;
 	Board m_board;
 	//ToolBar m_toolbar;
-	//sf::Sound m_Sound[2];
+	sf::Sound m_Sound[2];
 	//sf::Clock m_GameClock;
 	//sf::Clock m_MoveClock;
 	//sf::Time m_LevelTime;

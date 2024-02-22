@@ -37,3 +37,8 @@ const sf::Texture& Resources::getTexture(TextureObject texObj) const
 {
 	return m_textureVec[texObj];
 }
+
+sf::SoundBuffer& Resources::GetSound(Sound sound)
+{
+	return m_Sounds[sound];
+}
