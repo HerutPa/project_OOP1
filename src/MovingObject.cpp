@@ -18,20 +18,18 @@ const sf::Vector2f movingObject::getOriginalPos()
     return m_originalPos;
 }
 
-sf::Vector2f movingObject::directionToVector(Direction dir)
+sf::Vector2f movingObject::directionToVector(sf::Keyboard::Key key)
 {
-    switch (dir)
+    switch (key)
     {
-    case Direction::Up:
+    case sf::Keyboard::Up:
         return { 0, -1 };
-    case Direction::Down:
+    case sf::Keyboard::Down:
         return { 0, 1 };
-    case Direction::Right:
+    case sf::Keyboard::Right:
         return { 1, 0 };
-    case Direction::Left:
+    case sf::Keyboard::Left:
         return { -1, 0 };
-    case Direction::Stay:
-        return { 0, 0 };
     default:
         return { 0, 0 };
     }

@@ -14,8 +14,8 @@ void Resources::loadTextures()
 	m_textureVec.resize(TextureObject::t_Total);
 	m_textureVec[TextureObject::t_wall].loadFromFile("wall.png");
 	m_textureVec[TextureObject::t_door].loadFromFile("door.png");
-	//m_textureVec[TextureObject::t_cat].loadFromFile("cat.png");
-	//m_textureVec[TextureObject::t_mouse].loadFromFile("mouse.png");
+	m_textureVec[TextureObject::t_cat].loadFromFile("cat.png");
+	m_textureVec[TextureObject::t_mouse].loadFromFile("mouse.png");
 	m_textureVec[TextureObject::t_cheese].loadFromFile("cheese.png");
 	m_textureVec[TextureObject::t_present].loadFromFile("present.png");
 	m_textureVec[TextureObject::t_key].loadFromFile("key.png");

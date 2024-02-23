@@ -14,9 +14,9 @@ public:
 	//לא ברור למה וירטואל למעלה.
 	void setOriginalPos(sf::Vector2f Position);
 	const sf::Vector2f getOriginalPos();
-	void virtual moveObject(sf::Time clock/*לשלוח שני וקטורים*/) = 0;
-	void virtual updateMovement(sf:: Vector2f, int) = 0;
-	void virtual checkCollition() = 0;
+    virtual void moveObject(sf::Time clock/*לשלוח שני וקטורים*/) = 0;
+	virtual void updateMovement(sf:: Vector2f, int) = 0;
+	virtual void checkCollition() = 0;
 	virtual void UpdateDirection(sf::Vector2f) = 0;
 
 
@@ -24,7 +24,7 @@ public:
 
 protected:
 	Direction m_dir;
-	sf::Vector2f directionToVector(Direction dir);
+	sf::Vector2f directionToVector(sf::Keyboard::Key key);
 	sf::Vector2f m_stapSize;
 	sf::Vector2f m_originalPos;
 

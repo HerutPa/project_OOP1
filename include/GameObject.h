@@ -4,14 +4,14 @@
 #include "Resources.h"
 
 
-//class Mouse;
+class Mouse;
 //class Cat;
 class Wall;
 class StaticObject;
 class movingObject;
-//class Door;
-//class Key;
-//class Cheese;
+class Door;
+class Key;
+class Cheese;
 //class AddTime;
 //class ADDLife;
 //class Freese;

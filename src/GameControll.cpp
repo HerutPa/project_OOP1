@@ -158,7 +158,8 @@ void GameControll::StartGame()
                 break;
             }
         }*/
-        //m_board.UpdateDirection(); //update moving directions
+        auto delta_Time = m_MoveClock.restart();
+        m_board.updateGame(delta_Time); //update moving directions
         //m_board.UpdateMoving(m_AddedTime); // update moving objects below the situation
 
 

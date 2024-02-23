@@ -11,8 +11,9 @@
 #include "Door.h"
 #include "Cheese.h"
 #include "Wall.h"
-//#include "Pacman.h"
+#include "Mouse.h"
 //#include "Deamon.h"
+#include "Present.h"
 #include <fstream>
 #include "MovingObject.h"
 #include "StaticObjects.h"
@@ -31,8 +32,7 @@ public:
     void drawBoard(sf::RenderWindow& m_window);
 
     sf::Vector2f CalculateFactor();
-
-    void UpdateDirection();
+    void updateGame(const sf::Time delta_Time);
 
     sf::Sprite GetGameObjectMoving(const int index);
 

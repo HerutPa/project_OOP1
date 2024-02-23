@@ -1,10 +1,10 @@
 10 10
 ##########
 #$       #
-#$F  *D F#
-#D F *D F#
+#$F  *  F#
+#D F *  F#
 #D F  D F#
-#D F  D F#
+#D %  D F#
 #D F  D F#
 #D F  D F#
 #D F $D F#

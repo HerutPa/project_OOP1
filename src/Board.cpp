@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Board.h"
-#include <Present.h>
 
 Board::Board() : m_ifile("Board.txt")
 {
@@ -83,17 +82,13 @@ void Board::readboard()
 				m_StaticObject.back()->satScale(scaleFactor);
 				break;
 			}
+			case '%':
+			{
+				m_MovingObject.push_back(std::make_unique<Mouse>( Resources::instance().getTexture(Resources::t_mouse), location));
+				m_MovingObject.back()->satScale(scaleFactor);
 
-
-
-
-
-			//case 'F':
-			//{
-			//	m_MovingObject.push_back(std::make_unique<mouse>(location, Resources::instance().getTexture(Resources::t_mouse)));
-
-			//}
-			/*case '#':
+			}
+			/*case '^':
 			case '#':
 			case '#':
 			case '#':
@@ -106,14 +101,16 @@ void Board::readboard()
 		}
 	}
 
-
-
 }
 void Board::drawBoard(sf::RenderWindow& m_window)
 {
 	for (auto& staticc : m_StaticObject)
 	{
 		staticc->drawObject(m_window);
+	}
+	for (auto& moving : m_MovingObject)
+	{
+		moving->drawObject(m_window);
 	}
 }
 
@@ -132,12 +129,13 @@ sf::Vector2f Board::CalculateFactor()
 	return scaleFactor;
 }
 
-void Board::UpdateDirection()
+
+void Board::updateGame(const sf::Time delta_Time)
 {
 	//update each object direction 
-	for (int index = 0; index < m_MovingObject.size(); ++index)
+	for (auto& moving : m_MovingObject)
 	{
-		m_MovingObject[index]->UpdateDirection(GetGameObjectMoving(m_mouse_idx).getPosition());
+		moving->moveObject(delta_Time);
 	}
 }
 
