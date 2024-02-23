@@ -18,14 +18,14 @@ public:
 
 	void ButtonPress(const Button button);
 
-	void PlaySound(const Sound sound);
+	//void PlaySound(const Sound sound);
 
 
 
 
 
 
-
+	//
 
 
 
@@ -39,6 +39,6 @@ private:
 	sf::Sprite m_Buttons[BUTTONS];
 	sf::Sprite m_TitleObjects[TITLE_OBJECTS];
 	sf::Sprite m_Instructions_Page[INSTRUCTIONS];
-	sf::Sound m_Sound[SOUNDS];
+	//sf::Sound m_Sound[SOUNDS];
 
 };

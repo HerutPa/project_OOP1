@@ -39,7 +39,7 @@ private:
 	Menu m_menu;
 	Board m_board;
 	//ToolBar m_toolbar;
-	sf::Sound m_Sound[2];
+	//sf::Sound m_Sound[2];
 	//sf::Clock m_GameClock;
 	//sf::Clock m_MoveClock;
 	//sf::Time m_LevelTime;

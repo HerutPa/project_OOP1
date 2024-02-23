@@ -70,7 +70,7 @@ void Menu::ButtonPress(const Button button)
 	m_Buttons[button].setColor(sf::Color::Color(255, 255, 255, 150));
 }
 
-void Menu::PlaySound(const Sound sound)
-{
-	m_Sound[sound].play();
-}
+//void Menu::PlaySound(const Sound sound)
+//{
+//	m_Sound[sound].play();
+//}
