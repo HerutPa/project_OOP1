@@ -17,10 +17,10 @@ void GameControll::run()
     while (m_window.isOpen())
     {
         m_window.clear(sf::Color::Color(0, 0, 0));
-        //DrawMenu();
+        DrawMenu();
         m_window.display();
-        StartGame();
-       /* if (auto event = sf::Event{}; m_window.waitEvent(event))
+        //StartGame();
+        if (auto event = sf::Event{}; m_window.waitEvent(event))
         {
             switch (event.type)
             {
@@ -36,18 +36,18 @@ void GameControll::run()
                 break;
             }
 
-            case sf::Event::MouseMoved:
+            /*case sf::Event::MouseMoved:
             {
                 auto location = m_window.mapPixelToCoords(sf::Mouse::getPosition(m_window));
                 handleMouseMoved(location, PLAY, EXIT);
-            }
+            }*/
 
             }
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             m_window.close();
-        }*/
+        }
     }
 }
 
@@ -68,40 +68,40 @@ void GameControll::run()
 //}
 //
 //
-//void GameControll::DrawMenu()
-//{
-//    for (int object = TITLE; object <= TITLE_DEAMONS; ++object)
-//    {
-//        m_window.draw(m_menu.GetTitle((Title)object));
-//    }
-//
-//    for (int button = PLAY; button <= EXIT; ++button)
-//    {
-//        m_window.draw(m_menu.GetButton((Button)button));
-//    }
-//}
-//
-//void GameControll::handleClick(const sf::Vector2f& location)
-//{
-//    if (m_menu.GetButton(PLAY).getGlobalBounds().contains(location))
-//    {
-//       // m_menu.PlaySound(CLICK);
-//        //m_Sound[0].play();
-//        //PlayVideo();
-//        StartGame();
-//    }
-//    else if (m_menu.GetButton(HELP).getGlobalBounds().contains(location))
-//    {
-//       // m_menu.PlaySound(CLICK);
-//        InstructionsLoop();
-//    }
-//    else if (m_menu.GetButton(EXIT).getGlobalBounds().contains(location))
-//    {
-//        //m_menu.PlaySound(CLICK);
-//        m_window.close();
-//    }
-//}
-//
+void GameControll::DrawMenu()
+{
+    for (int object = TITLE; object <= TITLE_DEAMONS; ++object)
+    {
+        m_window.draw(m_menu.GetTitle((Title)object));
+    }
+
+    for (int button = PLAY; button <= EXIT; ++button)
+    {
+        m_window.draw(m_menu.GetButton((Button)button));
+    }
+}
+
+void GameControll::handleClick(const sf::Vector2f& location)
+{
+    if (m_menu.GetButton(PLAY).getGlobalBounds().contains(location))
+    {
+       // m_menu.PlaySound(CLICK);
+        //m_Sound[0].play();
+        //PlayVideo();
+        StartGame();
+    }
+    else if (m_menu.GetButton(HELP).getGlobalBounds().contains(location))
+    {
+       // m_menu.PlaySound(CLICK);
+        //InstructionsLoop();
+    }
+    else if (m_menu.GetButton(EXIT).getGlobalBounds().contains(location))
+    {
+        //m_menu.PlaySound(CLICK);
+        m_window.close();
+    }
+}
+
 //void GameControll::InstructionsLoop()
 //{
 //    /*bool exit = false;

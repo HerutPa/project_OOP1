@@ -46,8 +46,8 @@ private:
     int m_row = 0;
     int m_col = 0;
     std::ifstream m_ifile;  //= std::ifstream("Board.txt"); // the board
-    std::vector<std::unique_ptr<movingObject> > m_MovingObject;
-    std::vector<std::unique_ptr<StaticObject> > m_StaticObject;
+    std::vector<std::unique_ptr<movingObject>> m_MovingObject;
+    std::vector<std::unique_ptr<StaticObject>> m_StaticObject;
 
 
 

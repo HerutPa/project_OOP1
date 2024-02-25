@@ -5,7 +5,7 @@
 
 
 class Mouse;
-//class Cat;
+class Cat;
 class Wall;
 class StaticObject;
 class movingObject;

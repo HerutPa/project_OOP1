@@ -88,6 +88,12 @@ void Board::readboard()
 				m_MovingObject.back()->satScale(scaleFactor);
 
 			}
+		/*	case '^':
+			{
+				m_MovingObject.push_back(std::make_unique<Cat>(Resources::instance().getTexture(Resources::t_cat), location));
+				m_MovingObject.back()->satScale(scaleFactor);
+
+			}*/
 			/*case '^':
 			case '#':
 			case '#':

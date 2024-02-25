@@ -5,14 +5,11 @@
 #include <string.h>
 #include <vector>
 
-
-//enum Sound { SONG, CLICK, MINUS_LIFE, EAT, CLOCK_SOUND, DOOR_SOUND, FREEZE_SOUND, KEY_SOUND, EXTRA_LIFE, SUPER_PACMAN_SOUND, GAME_OVER };
 enum Button { PLAY, HELP, EXIT, VIDEO_PLAY, BACK };
 enum Title { TITLE, HELLO, WANNA_PLAY, LETS_GO, TITLE_PACMAN, TITLE_DEAMONS };
 enum Direction { Up, Down, Right, Left, Stay };
 //enum Sound { SONG, CLICK, MINUS_LIFE, EAT, CLOCK_SOUND, DOOR_SOUND, FREEZE_SOUND, KEY_SOUND, EXTRA_LIFE, SUPER_PACMAN_SOUND, GAME_OVER };
-enum Object { PACMAN, DEAMON_ORANGE, DEAMON_PINK, DEAMON_RED, DEAMON_AZURE, KEY, WALL, DOOR, COOKIE, SUPER_PRESENT, ADD_LIFE, FREEZE, ADD_TIME };
-
+enum Object { MOUSE, CAT_BLACK, CAT_WHITE, CAT_RED, /*DEAMON_AZURE,*/ KEY, WALL, DOOR, SHEESE, PRESENT, ADD_LIFE, FREEZE, ADD_TIME };
 
 //consts
 const int BUTTONS = 5;
@@ -43,6 +40,10 @@ public:
 	//const sf::Texture& getMenuTexture(Menu_Textures texture) const;
 	//const sf::Font& getFont() const;
 	//sf::SoundBuffer& GetSound(Sound);
+	sf::Texture& GetButton(Button);
+	sf::Texture& GetTitle(Title);
+
+
 
 	
 
@@ -73,6 +74,16 @@ private:
 	//void loadSounds();
 	void loadTextures();
 	//sf::SoundBuffer m_Sounds[SOUNDS];
+	sf::Texture m_ButtonTextures[BUTTONS];
+	sf::Texture m_TitleTextures[TITLE_OBJECTS];
+
+
+
+
+	std::string m_ButtonFiles[BUTTONS] = { "Play.png", "Help.png", "Exit.png" , "VideoPlay.png" , "Back.png" };
+	std::string m_TitleFiles[TITLE_OBJECTS] = { "title.png", "Hello.png", "WannaPlay.png", "LetsGo.png" , "Pacman-Title.png" , "Deamons-Title.png" };
+
+
 
 
 

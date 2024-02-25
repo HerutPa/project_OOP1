@@ -10,6 +10,7 @@ public:
 	Menu(int, int);
 	//void DrawMenu(sf::RenderWindow& m_window);
 
+
 	sf::Sprite GetButton(const Button) const;
 
 	sf::Sprite GetTitle(const Title object) const;
@@ -40,5 +41,7 @@ private:
 	sf::Sprite m_TitleObjects[TITLE_OBJECTS];
 	sf::Sprite m_Instructions_Page[INSTRUCTIONS];
 	//sf::Sound m_Sound[SOUNDS];
+
+	void SetPosition();
 
 };

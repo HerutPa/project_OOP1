@@ -25,9 +25,9 @@ public:
 	void handleClick(const sf::Vector2f&);
 	void handleNextClick(const sf::Vector2f&, bool&);
 	void handleMouseMoved(const sf::Vector2f, const Button, const Button);
-	void InstructionsLoop();
-	void DrawInstructions();
-	void BrighteningSprite(Title, int&, int, int);
+	//void InstructionsLoop();
+	//void DrawInstructions();
+	//void BrighteningSprite(Title, int&, int, int);
 	void PlayVideo();
 	void DrawToolBar();
 	void UpdateData();
