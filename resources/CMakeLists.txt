@@ -12,6 +12,9 @@ configure_file ("Exit.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("VideoPlay.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Back.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Title.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("background.png" ${CMAKE_BINARY_DIR} COPYONLY)
+
+
 configure_file ("Board.txt" ${CMAKE_BINARY_DIR} COPYONLY)
 
 

@@ -5,8 +5,16 @@
 GameControll::GameControll()
     :m_window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Mouse&Cat"),
         m_menu(WINDOW_WIDTH, WINDOW_HEIGHT),
+
     m_board()
 {
+    m_background.loadFromFile("background.png");
+    m_background.setSmooth(true);
+    sf::Sprite s1(m_background);
+    s1.scale(sf::Vector2f(1.2f, 1.2f));
+    m_window.clear(sf::Color::Color(0, 0, 0));
+    m_window.draw(s1);
+    m_window.display();
     /*m_window.setFramerateLimit(60);
     m_Sound[0].setBuffer(m_resource.GetSound(SONG));
     m_Sound[1].setBuffer(m_resource.GetSound(GAME_OVER));*/
@@ -16,7 +24,10 @@ void GameControll::run()
 {
     while (m_window.isOpen())
     {
+        sf::Sprite s1(m_background);
+        s1.scale(sf::Vector2f(2.35f, 1.35f));
         m_window.clear(sf::Color::Color(0, 0, 0));
+        m_window.draw(s1);
         DrawMenu();
         m_window.display();
         //StartGame();
