@@ -12,7 +12,7 @@
 #include "Cheese.h"
 #include "Wall.h"
 #include "Mouse.h"
-//#include "Deamon.h"
+#include "Cat.h"
 #include "Present.h"
 #include <fstream>
 #include "MovingObject.h"

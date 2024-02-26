@@ -86,14 +86,16 @@ void Board::readboard()
 			{
 				m_MovingObject.push_back(std::make_unique<Mouse>( Resources::instance().getTexture(Resources::t_mouse), location));
 				m_MovingObject.back()->satScale(scaleFactor);
+					break;
 
 			}
-		/*	case '^':
+			case '^':
 			{
 				m_MovingObject.push_back(std::make_unique<Cat>(Resources::instance().getTexture(Resources::t_cat), location));
 				m_MovingObject.back()->satScale(scaleFactor);
+				break;
 
-			}*/
+			}
 			/*case '^':
 			case '#':
 			case '#':
