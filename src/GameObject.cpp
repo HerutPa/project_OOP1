@@ -1,6 +1,10 @@
 #include "GameObject.h"
 
 
+GameObject::GameObject()
+{
+}
+
 GameObject::GameObject(sf::Texture Texture, sf::Vector2f Position)
 	:m_sprite(Texture)
 {
@@ -34,9 +38,9 @@ sf::FloatRect GameObject::getBounds()
 	return m_sprite.getGlobalBounds();
 }
 
-void GameObject::handleCollison(GameObject& obj)
+void GameObject::HandleCollision(GameObject& obj)
 {
-	obj.handleCollison(*this);
+	obj.HandleCollision(*this);
 }
 
 sf::Sprite& GameObject::GetSprite()

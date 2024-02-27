@@ -2,6 +2,9 @@
 
 #include "StaticObjects.h"
 #include <SFML/Graphics.hpp>
+#include "Mouse.h"
+#include "Key.h"
+
 //#include "Pacman.h"
 //#include "Deamon.h"
 
@@ -12,6 +15,9 @@ public:
     Door(sf::Texture Texture, sf::Vector2f Position);
     virtual void HandleCollision(Door& obj) {};
     ~Door();
+
+    virtual void HandleCollision(Mouse& mouse);
+
 
 
 	
@@ -30,4 +36,9 @@ public:
     //void SetCollide();
 
 private:
+
+    Key m_key;
+
+
+
 };

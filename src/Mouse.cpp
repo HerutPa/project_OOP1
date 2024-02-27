@@ -55,17 +55,17 @@ void Mouse::checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingO
 {
 	for (auto& staticc : m_StaticObject)
 	{
-		//std::cout << "before if checkCollition";
-
 		if (getBounds().intersects(staticc->getBounds()))
 		{
-			staticc->handleCollison(*this);
-			//std::cout << "checkCollition";
-
+			staticc->HandleCollision(*this);
 		}
 
 
 	}
+
+	//std::erase_if(m_StaticObject, [](const auto& game_object) {
+	//	return game_object.GetIsCollide(); // הפעולה החזירה יתרה מ-0, משמעו שהאובייקט מתנגש
+	//	});
 
 
 
@@ -76,9 +76,19 @@ void Mouse::checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingO
 }
 
 
-void Mouse::HandleCollision(Wall&)
+void Mouse::HandleCollision(Wall& wall)
 {
-	std::cout << "HandleCollision";
-
 	m_sprite.move(-m_stapSize);
+}
+
+void Mouse::HandleCollision(Door& door)
+{
+	if (!m_key.thereIsKey())
+	{
+		m_sprite.move(-m_stapSize);
+	}
+}
+
+void Mouse::HandleCollision(Key& key)
+{
 }

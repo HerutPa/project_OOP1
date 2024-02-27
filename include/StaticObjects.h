@@ -7,6 +7,7 @@
 class StaticObject : public GameObject
 {
 public:
+	StaticObject();
 	StaticObject(sf::Texture Texture, sf::Vector2f Position);
 	virtual ~StaticObject();
 	//לא ברור למה וירטואל למעלה.

@@ -9,3 +9,12 @@ Door::Door(sf::Texture Texture, sf::Vector2f Position) : StaticObject(Texture, P
 Door::~Door()
 {
 }
+
+void Door::HandleCollision(Mouse& mouse)
+{
+	if (m_key.thereIsKey())
+	{
+		m_isCollide = true; //בשביל המחיקה בבורד ..לבדוק האם צריך לשנות אותו ללא נכון בשביל המחיקה
+	}
+	mouse.HandleCollision(*this);
+}

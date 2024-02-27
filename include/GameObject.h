@@ -19,6 +19,9 @@ class Cheese;
 class GameObject
 {
 public:
+	GameObject();
+
+
 	GameObject (sf::Texture Texture, sf::Vector2f Position);
 		//sf::Texture getTexture();
 	void drawObject(sf::RenderWindow& m_window);
@@ -30,13 +33,13 @@ public:
 
 
 
-    void handleCollison(GameObject& obj);
-	virtual void handleCollison(Wall& obj) {};
-	virtual void handleCollison(Mouse& obj) {};
-	virtual void HandleCollision(Cheese&) {};
-	virtual void HandleCollision(Cat&) {};
-	virtual void HandleCollision(Door&) {};
-	virtual void HandleCollision(Key&) {};
+    void HandleCollision(GameObject& obj);
+	virtual void HandleCollision(Wall& obj) {};
+	virtual void HandleCollision(Mouse& obj) {};
+	virtual void HandleCollision(Cheese& obj) {};
+	virtual void HandleCollision(Cat& obj) {};
+	virtual void HandleCollision(Door& obj) {};
+	virtual void HandleCollision(Key& obj) ;
 	
 	
 	
@@ -60,6 +63,7 @@ protected:
 	sf::Sprite m_sprite;
 	char m_char;
 	//sf::Vector2f 
+	bool m_isCollide = false;
 
 
 
