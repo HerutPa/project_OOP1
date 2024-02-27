@@ -26,10 +26,23 @@ public:
 	const sf::Vector2f  getPosition();
 	const char getChar();
 	sf::FloatRect getBounds();
+	sf::Sprite& GetSprite();
+
+
 
     void handleCollison(GameObject& obj);
 	virtual void handleCollison(Wall& obj) {};
-	sf::Sprite& GetSprite();
+	virtual void handleCollison(Mouse& obj) {};
+	virtual void HandleCollision(Cheese&) {};
+	virtual void HandleCollision(Cat&) {};
+	virtual void HandleCollision(Door&) {};
+	virtual void HandleCollision(Key&) {};
+	
+	
+	
+	
+
+
 
 	/*virtual void handleCollison(Mouse& obj);
 	virtual void handleCollison(GamCateObject& obj);

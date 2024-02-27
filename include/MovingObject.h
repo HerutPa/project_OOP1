@@ -16,7 +16,8 @@ public:
 	const sf::Vector2f getOriginalPos();
     virtual void moveObject(sf::Time clock/*לשלוח שני וקטורים*/) = 0;
 	virtual void updateMovement(sf:: Vector2f, int) = 0;
-	virtual void checkCollition() = 0;
+	virtual void checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingObject,
+								std::vector<std::unique_ptr<StaticObject>> &m_StaticObject) = 0;
 	virtual void UpdateDirection(sf::Vector2f) = 0;
 
 

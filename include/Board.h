@@ -4,6 +4,7 @@
 //#include "Matrix.h"
 #include "GameObject.h"
 #include "Key.h"
+#include <memory>
 //#include "SuperPresent.h"
 //#include "Freeze.h"
 //#include "AddLife.h"

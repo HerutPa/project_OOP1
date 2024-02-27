@@ -1,4 +1,5 @@
 #include "Wall.h"
+#include <iostream>
 
 Wall::Wall(sf::Texture Texture, sf::Vector2f Position) : StaticObject(Texture, Position)
 {
@@ -8,4 +9,12 @@ Wall::Wall(sf::Texture Texture, sf::Vector2f Position) : StaticObject(Texture, P
 
 Wall::~Wall()
 {
+}
+
+void Wall::handleCollison(Mouse& obj)
+{
+
+
+	obj.handleCollison(*this);
+	//std::cout << "belong to WAll";
 }

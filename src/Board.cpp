@@ -144,6 +144,7 @@ void Board::updateGame(const sf::Time delta_Time)
 	for (auto& moving : m_MovingObject)
 	{
 		moving->moveObject(delta_Time);
+		moving->checkCollition(m_MovingObject, m_StaticObject);
 	}
 }
 

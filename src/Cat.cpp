@@ -45,7 +45,7 @@ void Cat::updateMovement(sf::Vector2f, int)
 {
 }
 
-void Cat::checkCollition()
+void Cat::checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingObject, std::vector<std::unique_ptr<StaticObject>> &m_StaticObject)
 {
 }
 

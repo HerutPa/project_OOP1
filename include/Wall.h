@@ -1,6 +1,8 @@
 #pragma once
 
 #include "StaticObjects.h"
+#include "MovingObject.h"
+#include "Mouse.h"
 #include <SFML/Graphics.hpp>
 
 
@@ -11,6 +13,12 @@ public:
 	Wall(sf::Texture Texture, sf::Vector2f Position);
 	virtual void HandleCollision(Wall& obj) {};
 	~Wall();
+	virtual void handleCollison(Mouse& obj);
+
+
+
+
+
 
 
 	/*virtual void handleCollison(Mouse& obj);

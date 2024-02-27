@@ -1,4 +1,5 @@
 #include "Mouse.h"
+#include <iostream>
 
 constexpr auto MouseSize = 400.f;
 constexpr auto MouseSpeed = MouseSize * 1;
@@ -40,15 +41,44 @@ sf::Keyboard::Key Mouse::getKeyPress() const
 	
 }
 
-
 void Mouse::updateMovement(sf::Vector2f, int)
-{
-}
-
-void Mouse::checkCollition()
 {
 }
 
 void Mouse::UpdateDirection(sf::Vector2f)
 {
+}
+
+
+
+void Mouse::checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingObject, std::vector<std::unique_ptr<StaticObject>> &m_StaticObject)
+{
+	for (auto& staticc : m_StaticObject)
+	{
+		//std::cout << "before if checkCollition";
+
+		if (getBounds().intersects(staticc->getBounds()))
+		{
+			staticc->handleCollison(*this);
+			//std::cout << "checkCollition";
+
+		}
+
+
+	}
+
+
+
+	/*for (auto& moving : m_MovingObject)
+	{
+		moving->drawObject(m_window);
+	}*/
+}
+
+
+void Mouse::HandleCollision(Wall&)
+{
+	std::cout << "HandleCollision";
+
+	m_sprite.move(-m_stapSize);
 }
