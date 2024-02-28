@@ -12,9 +12,9 @@ Door::~Door()
 
 void Door::HandleCollision(Mouse& mouse)
 {
-	if (m_key.thereIsKey())
+	if (mouse.thereIsKey())
 	{
-		m_isCollide = true; //בשביל המחיקה בבורד ..לבדוק האם צריך לשנות אותו ללא נכון בשביל המחיקה
+		m_isColiide = true;
 	}
 	mouse.HandleCollision(*this);
 }

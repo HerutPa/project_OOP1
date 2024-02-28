@@ -29,7 +29,7 @@ public:
 
 	enum TextureObject
 	{
-		t_wall, t_door, t_cat ,t_mouse, t_cheese, t_present, t_key, t_save, t_reset, t_LifeGift, t_TimeGift, t_FreezeGift,
+		t_wall, t_door, t_cat ,t_mouse, t_cheese, t_present, t_key, t_save, t_reset, t_lifeGift, t_TimeGift, t_FreezeGift,
 		// Add other...
 		t_Total
 	};
@@ -81,7 +81,7 @@ private:
 
 
 	std::string m_ButtonFiles[BUTTONS] = { "Play.png", "Help.png", "Exit.png" , "VideoPlay.png" , "Back.png" };
-	std::string m_TitleFiles[TITLE_OBJECTS] = { "title.png", "Hello.png", "WannaPlay.png", "LetsGo.png" , "Pacman-Title.png" , "Deamons-Title.png" };
+	//std::string m_TitleFiles[TITLE_OBJECTS] = { "title.png", "Hello.png", "WannaPlay.png", "LetsGo.png" , "Pacman-Title.png" , "Deamons-Title.png" };
 
 
 

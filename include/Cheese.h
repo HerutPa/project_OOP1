@@ -2,7 +2,7 @@
 
 #include "StaticObjects.h"
 #include <SFML/Graphics.hpp>
-//#include "Pacman.h"
+#include "Mouse.h"
 //#include "Deamon.h"
 
 class Cheese :public StaticObject
@@ -10,13 +10,15 @@ class Cheese :public StaticObject
 public:
 
     Cheese(sf::Texture Texture, sf::Vector2f Position);
-    virtual void HandleCollision(Cheese& obj) {};
     ~Cheese();
+
+
+    virtual void HandleCollision(Cheese& obj) {};
+    virtual void HandleCollision(Mouse& mouse);
 
 
 
     /*virtual void HandleCollision(GameObject&)override;
-    virtual void HandleCollision(Pacman&)override;
     virtual void HandleCollision(Deamon&)override;
     virtual void HandleCollision(Wall&)override;
     virtual void HandleCollision(Door&)override;

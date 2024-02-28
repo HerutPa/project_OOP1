@@ -1,5 +1,5 @@
 #include "Mouse.h"
-#include <iostream>
+#include <GameControll.h>
 
 constexpr auto MouseSize = 400.f;
 constexpr auto MouseSpeed = MouseSize * 1;
@@ -83,12 +83,43 @@ void Mouse::HandleCollision(Wall& wall)
 
 void Mouse::HandleCollision(Door& door)
 {
-	if (!m_key.thereIsKey())
+	if (m_counterKey == 0)
 	{
 		m_sprite.move(-m_stapSize);
+	}
+	else
+	{
+		m_counterKey--;
 	}
 }
 
 void Mouse::HandleCollision(Key& key)
 {
+	m_counterKey++;
 }
+
+void Mouse::HandleCollision(AddLife& addLife)
+{
+	m_counterLife++; 
+}
+
+void Mouse::HandleCollision(AddTime& addLife)
+{
+
+}
+
+void Mouse::HandleCollision(Freeze& freeze)
+{
+}
+
+void Mouse::HandleCollision(Cheese& obj)
+{
+}
+
+bool Mouse::thereIsKey()
+{
+	if (m_counterKey > 0)
+		return true;
+	return false;
+}
+

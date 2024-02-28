@@ -1,24 +1,15 @@
 #pragma once
-
 #include "StaticObjects.h"
 #include <SFML/Graphics.hpp>
 #include "Mouse.h"
-//#include "Deamon.h"
 
 class Key :public StaticObject
 {
 public:
-
     Key(sf::Texture Texture, sf::Vector2f Position);
-    Key();
-    virtual void HandleCollision(Key& obj) {};
     ~Key();
-    bool thereIsKey();
-
+   
     virtual void HandleCollision(Mouse& mouse);
-
-
-
 
     /*virtual void HandleCollision(GameObject&)override;
     virtual void HandleCollision(Pacman&)override;
@@ -32,10 +23,9 @@ public:
     virtual void HandleCollision(AddLife&)override;
     virtual void HandleCollision(Cookie&)override;*/
 
-    //void SetCollide();
+    //virtual void HandleCollision(Key& obj) {};
 
 private:
-    int m_counterKey = 0;
 
 
 

@@ -11,9 +11,9 @@ class Wall : public StaticObject
 {
 public:
 	Wall(sf::Texture Texture, sf::Vector2f Position);
-	virtual void HandleCollision(Wall& obj) {};
+	virtual void HandleCollision(Wall& wall) {};
 	~Wall();
-	virtual void HandleCollision(Mouse& obj);
+	virtual void HandleCollision(Mouse& mouse);
 
 
 

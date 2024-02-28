@@ -9,3 +9,10 @@ Cheese::Cheese(sf::Texture Texture, sf::Vector2f Position) : StaticObject(Textur
 Cheese::~Cheese()
 {
 }
+
+void Cheese::HandleCollision(Mouse& mouse)
+{
+	m_isColiide = true;
+	mouse.HandleCollision(*this);
+
+}

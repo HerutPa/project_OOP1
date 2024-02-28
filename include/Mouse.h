@@ -4,8 +4,8 @@
 #include "StaticObjects.h"
 #include <SFML/Graphics.hpp>
 #include "Key.h"
-//#include "Pacman.h"
-//#include "Deamon.h"
+#include <GameControll.h>
+
 
 class Mouse :public movingObject
 {
@@ -20,12 +20,17 @@ public:
     virtual void checkCollition(std::vector<std::unique_ptr<movingObject>>& m_MovingObject,
                                 std::vector<std::unique_ptr<StaticObject>>& m_StaticObject) ;
 
-    virtual void HandleCollision(Mouse& obj) {};
+    virtual void HandleCollision(Mouse& mouse) {};
     virtual void HandleCollision(Wall& wall) ;
-    virtual void HandleCollision(Cheese& obj) {};
-    virtual void HandleCollision(Cat& obj) {};
+    virtual void HandleCollision(Cheese& cheese);
+    virtual void HandleCollision(Cat& cat) {};
     virtual void HandleCollision(Door& door) ;
     virtual void HandleCollision(Key& key);
+    virtual void HandleCollision(AddLife& addLife);
+    virtual void HandleCollision(AddTime& addTime);
+    virtual void HandleCollision(Freeze& freeze);
+
+    bool thereIsKey();
 
 
 
@@ -33,10 +38,10 @@ public:
 
 private:
 
-    sf::Keyboard::Key getKeyMouse();
+    //sf::Keyboard::Key getKeyMouse();
     std::vector<sf::Keyboard::Key> m_keyBoard;
     sf::Keyboard::Key getKeyPress() const;
     //Direction m_direction = Stay;
-    Key m_key;
-
+    int m_counterKey = 0;
+    int m_counterLife = 3;
 };

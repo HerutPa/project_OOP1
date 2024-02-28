@@ -48,3 +48,13 @@ sf::Sprite& GameObject::GetSprite()
 	return m_sprite;
 }
 
+const bool GameObject::getIsCollide() const
+{
+	return m_isColiide;
+}
+
+//bool GameObject::thereIsKey()
+//{
+//	return false;
+//}
+

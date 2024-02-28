@@ -1,19 +1,17 @@
 #pragma once
-
 #include "StaticObjects.h"
 #include <SFML/Graphics.hpp>
 #include "Mouse.h"
-//#include "Deamon.h"
 
-class Present :public StaticObject
+class AddLife :public StaticObject
 {
 public:
 
-    Present(sf::Texture Texture, sf::Vector2f Position);
-    virtual void HandleCollision(Present& obj) {};
-    ~Present();
+    AddLife(sf::Texture Texture, sf::Vector2f Position);
+    ~AddLife();
 
-
+    virtual void HandleCollision(AddLife& obj) {};
+    virtual void HandleCollision(Mouse& mouse);
 
     /*virtual void HandleCollision(GameObject&)override;
     virtual void HandleCollision(Pacman&)override;
@@ -27,7 +25,9 @@ public:
     virtual void HandleCollision(AddLife&)override;
     virtual void HandleCollision(Cookie&)override;*/
 
-    //void SetCollide();
-
 private:
+
+
+
+
 };

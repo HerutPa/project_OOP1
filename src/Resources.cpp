@@ -19,8 +19,12 @@ void Resources::loadTextures()
 	m_textureVec[TextureObject::t_cheese].loadFromFile("cheese.png");
 	m_textureVec[TextureObject::t_present].loadFromFile("present.png");
 	m_textureVec[TextureObject::t_key].loadFromFile("key.png");
+	m_textureVec[TextureObject::t_lifeGift].loadFromFile("present.png");
+	m_textureVec[TextureObject::t_TimeGift].loadFromFile("present.png");
+	m_textureVec[TextureObject::t_FreezeGift].loadFromFile("present.png");
 	//m_textureVec[TextureObject::t_save].loadFromFile("save.png");
 	//m_textureVec[TextureObject::t_reset].loadFromFile("reset.png");
+
 
 	for (int button = PLAY; button <= BACK; button++)
 	{

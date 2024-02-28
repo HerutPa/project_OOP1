@@ -1,14 +1,11 @@
 #pragma once
-
 #include <SFML/Graphics.hpp>
-//#include "Matrix.h"
 #include "GameObject.h"
 #include "Key.h"
 #include <memory>
-//#include "SuperPresent.h"
-//#include "Freeze.h"
-//#include "AddLife.h"
-//#include "AddTime.h"
+#include "Freeze.h"
+#include "AddLife.h"
+#include "AddTime.h"
 #include "Door.h"
 #include "Cheese.h"
 #include "Wall.h"

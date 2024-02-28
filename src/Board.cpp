@@ -13,9 +13,7 @@ Board::Board() : m_ifile("Board.txt")
 		std::cerr << "could'nt open board text file\n";
 		exit(EXIT_FAILURE);
 	}
-
 	m_ifile.close();
-
 }
 
 
@@ -82,12 +80,29 @@ void Board::readboard()
 				m_StaticObject.back()->satScale(scaleFactor);
 				break;
 			}
+			case 'L':
+			{
+				m_StaticObject.push_back(std::make_unique<AddLife>(Resources::instance().getTexture(Resources::t_lifeGift), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
+			case 'T':
+			{
+				m_StaticObject.push_back(std::make_unique<AddTime>(Resources::instance().getTexture(Resources::t_TimeGift), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
+			case 'F':
+			{
+				m_StaticObject.push_back(std::make_unique<Freeze>(Resources::instance().getTexture(Resources::t_FreezeGift), location));
+				m_StaticObject.back()->satScale(scaleFactor);
+				break;
+			}
 			case '%':
 			{
 				m_MovingObject.push_back(std::make_unique<Mouse>( Resources::instance().getTexture(Resources::t_mouse), location));
 				m_MovingObject.back()->satScale(scaleFactor);
-					break;
-
+			    break;
 			}
 			case '^':
 			{
@@ -116,6 +131,9 @@ void Board::drawBoard(sf::RenderWindow& m_window)
 	{
 		staticc->drawObject(m_window);
 	}
+
+	std::erase_if(m_StaticObject, [](const auto& game_object) {return game_object->getIsCollide(); });
+
 	for (auto& moving : m_MovingObject)
 	{
 		moving->drawObject(m_window);
