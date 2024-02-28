@@ -49,8 +49,6 @@ void Mouse::UpdateDirection(sf::Vector2f)
 {
 }
 
-
-
 void Mouse::checkCollition(std::vector<std::unique_ptr<movingObject>> &m_MovingObject, std::vector<std::unique_ptr<StaticObject>> &m_StaticObject)
 {
 	for (auto& staticc : m_StaticObject)
@@ -103,14 +101,6 @@ void Mouse::HandleCollision(AddLife& addLife)
 	m_counterLife++; 
 }
 
-void Mouse::HandleCollision(AddTime& addLife)
-{
-
-}
-
-void Mouse::HandleCollision(Freeze& freeze)
-{
-}
 
 void Mouse::HandleCollision(Cheese& obj)
 {

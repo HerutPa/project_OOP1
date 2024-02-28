@@ -10,7 +10,7 @@ public:
     AddLife(sf::Texture Texture, sf::Vector2f Position);
     ~AddLife();
 
-    virtual void HandleCollision(AddLife& obj) {};
+    virtual void HandleCollision(AddLife& life) {};
     virtual void HandleCollision(Mouse& mouse);
 
     /*virtual void HandleCollision(GameObject&)override;

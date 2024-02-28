@@ -92,7 +92,7 @@ void Board::readboard()
 				m_StaticObject.back()->satScale(scaleFactor);
 				break;
 			}
-			case 'F':
+			case 'Z':
 			{
 				m_StaticObject.push_back(std::make_unique<Freeze>(Resources::instance().getTexture(Resources::t_FreezeGift), location));
 				m_StaticObject.back()->satScale(scaleFactor);

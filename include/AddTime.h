@@ -10,7 +10,7 @@ public:
     AddTime(sf::Texture Texture, sf::Vector2f Position);
     ~AddTime();
 
-    virtual void HandleCollision(AddTime& obj) {};
+    virtual void HandleCollision(AddTime& time) {};
     virtual void HandleCollision(Mouse& mouse);
 
     /*virtual void HandleCollision(GameObject&)override;

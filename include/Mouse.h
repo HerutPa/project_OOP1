@@ -1,11 +1,10 @@
 #pragma once
 
+#include <SFML/Graphics.hpp>
+#include <GameControll.h>
 #include "MovingObject.h"
 #include "StaticObjects.h"
-#include <SFML/Graphics.hpp>
 #include "Key.h"
-#include <GameControll.h>
-
 
 class Mouse :public movingObject
 {
@@ -27,8 +26,8 @@ public:
     virtual void HandleCollision(Door& door) ;
     virtual void HandleCollision(Key& key);
     virtual void HandleCollision(AddLife& addLife);
-    virtual void HandleCollision(AddTime& addTime);
-    virtual void HandleCollision(Freeze& freeze);
+    virtual void HandleCollision(AddTime& addTime) {};
+    virtual void HandleCollision(Freeze& freeze) {};
 
     bool thereIsKey();
 

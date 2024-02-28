@@ -12,7 +12,6 @@ public:
     Cheese(sf::Texture Texture, sf::Vector2f Position);
     ~Cheese();
 
-
     virtual void HandleCollision(Cheese& obj) {};
     virtual void HandleCollision(Mouse& mouse);
 

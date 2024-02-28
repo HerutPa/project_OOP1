@@ -10,7 +10,7 @@ public:
     Freeze(sf::Texture Texture, sf::Vector2f Position);
     ~Freeze();
 
-    virtual void HandleCollision(Freeze& obj) {};
+    virtual void HandleCollision(Freeze& freeze) {};
     virtual void HandleCollision(Mouse& mouse);
 
     /*virtual void HandleCollision(GameObject&)override;

@@ -1,12 +1,9 @@
 #pragma once
-#include <iostream>
 #include "GameControll.h"
 
 GameControll::GameControll()
     :m_window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Mouse&Cat"),
-        m_menu(WINDOW_WIDTH, WINDOW_HEIGHT),
-
-    m_board()
+        m_menu(WINDOW_WIDTH, WINDOW_HEIGHT)
 {
     m_background.loadFromFile("background.png");
     m_background.setSmooth(true);
@@ -15,6 +12,7 @@ GameControll::GameControll()
     m_window.clear(sf::Color::Color(0, 0, 0));
     m_window.draw(s1);
     m_window.display();
+   
     /*m_window.setFramerateLimit(60);
     m_Sound[0].setBuffer(m_resource.GetSound(SONG));
     m_Sound[1].setBuffer(m_resource.GetSound(GAME_OVER));*/
@@ -172,17 +170,7 @@ void GameControll::StartGame()
         auto delta_Time = m_MoveClock.restart();
         m_board.updateGame(delta_Time); //update moving directions
         //m_board.UpdateMoving(m_AddedTime); // update moving objects below the situation
-
-
-
-
-
     }
- 
-
-
-
-
-
-
 }
+
+
